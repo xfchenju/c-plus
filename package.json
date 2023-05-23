@@ -1,0 +1,36 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "pnpm -C play dev",
+    "build": "gulp -f build/gulpfile.ts",
+    "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
+    "clean:dist": "rimraf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@c-plus/components": "workspace:^1.0.0",
+    "@c-plus/theme-chalk": "workspace:^1.0.0",
+    "@c-plus/utils": "workspace:^1.0.0",
+    "chalk": "^5.2.0",
+    "consola": "^3.1.0",
+    "typescript": "^5.0.4",
+    "vue": "^3.3.4"
+  },
+  "devDependencies": {
+    "@types/gulp": "^4.0.10",
+    "@types/gulp-autoprefixer": "^0.0.34",
+    "@types/gulp-clean-css": "^4.3.1",
+    "@types/gulp-sass": "^5.0.1",
+    "@types/sass": "^1.45.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-typescript": "6.0.0-alpha.1",
+    "rimraf": "^5.0.1",
+    "sass": "^1.62.1",
+    "sucrase": "^3.32.0"
+  }
+}
