@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "dev": "pnpm -C play dev",
-    "build": "gulp -f build/gulpfile.ts",
+    "build": "gulp --require @esbuild-kit/cjs-loader -f build/gulpfile.ts",
     "clean": "pnpm run clean:dist && pnpm run -r --parallel clean",
     "clean:dist": "rimraf dist"
   },
@@ -19,6 +19,7 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@esbuild-kit/cjs-loader": "^2.4.2",
     "@types/gulp": "^4.0.10",
     "@types/gulp-autoprefixer": "^0.0.34",
     "@types/gulp-clean-css": "^4.3.1",
@@ -30,7 +31,6 @@
     "gulp-sass": "^5.1.0",
     "gulp-typescript": "6.0.0-alpha.1",
     "rimraf": "^5.0.1",
-    "sass": "^1.62.1",
-    "sucrase": "^3.32.0"
+    "sass": "^1.62.1"
   }
 }
