@@ -1,0 +1,16 @@
+{
+  "name": "@xfchenju/c-plus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./es/components/index.js",
+  "typings": "./es/components/index.d.ts",
+  "scripts": {
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

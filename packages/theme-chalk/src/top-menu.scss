@@ -1,0 +1,25 @@
+@use './mixins/mixins.scss'as *;
+
+.#{$namespace}-top-menu {
+  .el-menu {
+    border-bottom: none;
+    height: 50px;
+    .el-menu-item {
+      margin: 0 20px;
+      padding: 0;
+      line-height: 47px;
+      font-size: 14px;
+      &.is-active {
+        color: rgba(33, 37, 41, 1) !important;
+        font-weight: bold;
+        border-bottom-width: 3px;
+      }
+    }
+  }
+  .sub-app-icon {
+    margin-left: 4px;
+    width: 16px;
+    height: 18px;
+    vertical-align: middle;
+  }
+}

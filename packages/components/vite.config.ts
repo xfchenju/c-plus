@@ -48,19 +48,19 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({
-        outputDir: resolve(__dirname, `./${PKG_NAME}/es/types`),
+        outputDir: resolve(buildOutput, `./es`),
         //指定使用的tsconfig.json为我们整个项目根目录下掉,如果不配置,你也可以在components下新建tsconfig.json
         tsConfigFilePath: resolve(projRoot, `./tsconfig.json`)
       }),
       //因为这个插件默认打包到es下，我们想让lib目录下也生成声明文件需要再配置一个
       dts({
-        outputDir: resolve(__dirname, `./${PKG_NAME}/lib/types`),
+        outputDir: resolve(buildOutput, `./lib`),
         tsConfigFilePath: resolve(projRoot, `./tsconfig.json`)
       }),
   ],
   resolve: {
     alias: {
-      '@': resolve(__dirname, './'),
+      '@': resolve(__dirname, './src'),
     },
   },
 })

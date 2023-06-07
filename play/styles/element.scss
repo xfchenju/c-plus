@@ -1,0 +1,49 @@
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with (
+  $colors: (
+    'primary': (
+      'base': #03AC82, // 主题颜色
+    ),
+    'warning': (
+      'base': #EE8B00,
+    ),
+    'danger': (
+      'base': #FF6045,
+    ),
+    'error': (
+      'base': #FF6045,
+    ),
+    'info': (
+      'base': #909399,
+    ),
+  ),
+  $text-color: (
+    'primary': #51596C,
+    'regular': #51596C,
+    'placeholder': #CED4DA
+  ),
+  $border-color: (
+    'base': #e4e7ed
+  ),
+  $pagination: (
+    'font-size': 14px
+  ),
+  $menu: (
+    'hover-bg-color':#fff
+  ),
+  $button-border-radius: (
+    'default': 2px,
+    'large': 2px,
+    'small': 2px
+  ),
+  $input: (
+    'border-radius': 2px
+  ),
+  $messagebox: (
+    'width': 600px,
+  )
+);
+
+// $--font-path: '~element-plus/lib/theme-chalk/fonts';
+// @use "~element-plus/theme-chalk/src/index" as *;
+

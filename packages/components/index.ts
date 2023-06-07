@@ -1,32 +1,23 @@
-export * from './icon'
+import { App } from 'vue'
+import { CommonModuleConfigType } from './constants/types'
+import CIcon from './icon'
+import CTopMenu from './TopMenu'
 
-import BaseTable from './BaseTable'
-import GNoTask from './GNoTask'
-import GIcon from './GIcon'
-import GSelect from './GSelect'
-import GPageTable from './GPageTable'
-import { usePageTable } from './GPageTable'
-import GSearchBar from './GSearchBar'
-import PageHeaderNew from './PageHeaderNew'
-import PageTableTabPane from './PageTableTabPane'
-import PageTableTabs from './PageTableTabs'
-
-export type { BaseTableProps } from './BaseTable'
-export type { PageHeaderProps, SearchButtonOptionsType, SearchOptionsType, PageTableProps } from './GPageTable';
-
-const components = [BaseTable, GNoTask, GIcon, GSelect, GPageTable, usePageTable, GSearchBar, PageHeaderNew, PageTableTabPane, PageTableTabs]
-
+const components = [CIcon, CTopMenu]
 export {
-	BaseTable,
-	GNoTask,
-	GIcon,
-	GSelect,
-	GPageTable,
-	usePageTable,
-	GSearchBar,
-	PageHeaderNew,
-	PageTableTabPane,
-	PageTableTabs,
+    CIcon,
+    CTopMenu
 }
 
-export default components 
+
+
+interface CPlusOptions {
+    CommonModuleConfig: CommonModuleConfigType
+}
+
+export default {
+    install: (app: App, options: CPlusOptions) => {
+        console.log('options', options)
+        components.forEach(c => app.use(c));
+    }
+}
