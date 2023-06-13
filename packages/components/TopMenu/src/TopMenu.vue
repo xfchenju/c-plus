@@ -19,14 +19,30 @@
     </div>
 </template>
 <script lang="ts" setup name="TopMenu">
-import { ref } from 'vue';
+import { ref, inject, onMounted } from 'vue';
 import { navbarMenuConfiguration } from './config';
+import { useGlobalConfig } from '../../hooks';
+import { getManagerInfo } from '../../commonModule/apis/common/common'
 const activeMenu = ref()
+
+const globalConfig = useGlobalConfig()
+
+const config = globalConfig.value.CommonModuleConfig
+
+// const { get } = globalConfig.value;
+const user = ref()
+onMounted(async () => {
+  const res = await getManagerInfo()
+  console.log('res', res)
+  user.value = res.user
+})
 
 defineOptions({
   name: 'CTopMenu',
   inheritAttrs: false
 })
+
+
 
 function changePlatform() {
   console.log('changePlatform')
