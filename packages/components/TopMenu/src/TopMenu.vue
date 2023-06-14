@@ -1,5 +1,5 @@
 <template>
-    <div class="c-top-menu">
+    <div class="c-top-menu app-menu-list g-ml8">
       <el-menu :default-active="activeMenu" mode="horizontal" @select="changePlatform">
         <el-menu-item
           :index="item.menuIndex"
@@ -19,17 +19,15 @@
     </div>
 </template>
 <script lang="ts" setup name="TopMenu">
-import { ref, inject, onMounted } from 'vue';
-import { navbarMenuConfiguration } from './config';
-import { useGlobalConfig } from '../../hooks';
-import { getManagerInfo } from '../../commonModule/apis/common/common'
-const activeMenu = ref()
-
-const globalConfig = useGlobalConfig()
-
-const config = globalConfig.value.CommonModuleConfig
-
-// const { get } = globalConfig.value;
+import { ref, onMounted } from 'vue';
+import { navbarMenuConfiguration } from './config'
+interface TopMenuProps {
+  get: any;
+  post: any;
+}
+const props = defineProps<TopMenuProps>()
+const getManagerInfo = () => props.get(`/upms/customer/getCustomerInfo`);
+const activeMenu = ref();
 const user = ref()
 onMounted(async () => {
   const res = await getManagerInfo()
@@ -37,14 +35,12 @@ onMounted(async () => {
   user.value = res.user
 })
 
+function changePlatform() {
+  console.log('changePlatform')
+}
+
 defineOptions({
   name: 'CTopMenu',
   inheritAttrs: false
 })
-
-
-
-function changePlatform() {
-  console.log('changePlatform')
-}
 </script>

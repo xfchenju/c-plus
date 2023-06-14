@@ -1,30 +1,17 @@
-import { App, Ref } from 'vue'
-export * from './constants/types';
-export * from './constants';
-import { CommonModuleConfigType } from './constants/types'
+import { App } from 'vue'
 import CIcon from './icon'
 import CTopMenu from './TopMenu'
-import CConfigProvider from './config-provider'
-import type { ConfigProviderProps } from './config-provider';
-import { provideGlobalConfig } from './hooks'
-export type { ConfigProviderProps };
+import CNavbar from './navbar'
 
-const components = [CIcon, CTopMenu, CConfigProvider]
+const components = [CIcon, CTopMenu, CNavbar]
 export {
     CIcon,
     CTopMenu,
-    CConfigProvider
+    CNavbar
 }
 
-// export interface CPlusOptions {
-//     CommonModuleConfig: Ref<CommonModuleConfigType>
-// }
-
 export default {
-    install: (app: App, options: ConfigProviderProps) => {
-        console.log('options', options)
+    install: (app: App) => {
         components.forEach(c => app.use(c));
-
-        if (options) provideGlobalConfig(options, app, true)
     }
 }
