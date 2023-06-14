@@ -1,16 +1,13 @@
 {
   "name": "@xfchenju/c-plus",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
-  "main": "./es/components/index.js",
-  "typings": "./es/components/index.d.ts",
+  "main": "./es/packages/components/index.js",
+  "typings": "./es/packages/components/index.d.ts",
   "scripts": {
     "build": "vite build"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "lodash": "^4.17.21"
-  }
+  "license": "ISC"
 }
