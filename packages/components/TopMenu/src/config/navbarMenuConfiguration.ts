@@ -72,7 +72,7 @@ export const navbarMenuConfiguration: NavbarMenuConfigurationItem[] = [
     path: '/cmd'
   },
   {
-    name: '系统',
+    name: '管理后台',
     subApp: 'MAIN',
     subAppPath: '/main',
     menuIndex: 'MAIN',
