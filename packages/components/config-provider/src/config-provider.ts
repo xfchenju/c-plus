@@ -1,7 +1,7 @@
 import { defineComponent, renderSlot, defineProps } from 'vue'
 // import { buildProps } from '../../utils'
-import { provideGlobalConfig } from '../../hooks'
-import { CommonModuleConfigType } from '../../constants/types'
+import { provideGlobalConfig } from '@c-plus/hooks'
+import { CommonModuleConfigType } from '.@c-plus/constants/types'
 // import type { ExtractPropTypes } from 'vue'
 
 export interface ConfigProviderProps {

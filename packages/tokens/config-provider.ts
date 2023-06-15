@@ -1,4 +1,4 @@
-import type { ConfigProviderProps } from '../config-provider'
+import type { ConfigProviderProps } from '@c-plus/components/config-provider'
 import type { InjectionKey, Ref } from 'vue'
 
 export type ConfigProviderContext = Partial<ConfigProviderProps>

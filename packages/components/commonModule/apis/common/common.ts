@@ -6,7 +6,7 @@
  * @LastEditTime: 2023-05-29 16:17:42
  */
 import { computed } from 'vue';
-import { useGlobalConfig } from '../../../hooks';
+import { useGlobalConfig } from '@c-plus/hooks';
 import { IAddFeedBack, IMailParams, IReadType, IMailItem } from './model/commonModel';
 import { BasicPagingListParams, BasicPagingListResult } from '../basicModel';
 const globalConfig = useGlobalConfig()

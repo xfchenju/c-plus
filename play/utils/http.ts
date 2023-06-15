@@ -54,7 +54,7 @@ $http.interceptors.request.use(
     console.log('request interceptor', config);
     config.headers['Biz-Scope'] = 'common';
     config.headers['Enterprise-No'] = 'C0000001';
-    config.headers.Authorization = `Bearer 727c27bf-a5f3-4c5c-b525-f680153b5213`;
+    config.headers.Authorization = `Bearer 8cdf254b-9a97-4bc0-9001-e4ff450010eb`;
     return config;
   },
   (error: any) => {

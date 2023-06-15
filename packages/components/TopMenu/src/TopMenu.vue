@@ -21,7 +21,7 @@
 <script lang="ts" setup name="TopMenu">
 import { ref, inject, onMounted } from 'vue';
 import { navbarMenuConfiguration } from './config';
-import { useGlobalConfig } from '../../hooks';
+import { useGlobalConfig } from '@c-plus/hooks';
 import { getManagerInfo } from '../../commonModule/apis/common/common'
 const activeMenu = ref()
 

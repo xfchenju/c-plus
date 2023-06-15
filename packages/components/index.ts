@@ -1,12 +1,11 @@
 import { App, Ref } from 'vue'
-export * from './constants/types';
-export * from './constants';
-import { CommonModuleConfigType } from './constants/types'
+export * from '@c-plus/constants';
+import { CommonModuleConfigType } from '@c-plus/constants'
 import CIcon from './icon'
 import CTopMenu from './TopMenu'
 import CConfigProvider from './config-provider'
 import type { ConfigProviderProps } from './config-provider';
-import { provideGlobalConfig } from './hooks'
+import { provideGlobalConfig } from '@c-plus/hooks'
 export type { ConfigProviderProps };
 
 const components = [CIcon, CTopMenu, CConfigProvider]

@@ -5,7 +5,11 @@ importers:
   .:
     specifiers:
       '@c-plus/components': workspace:^1.0.0
+      '@c-plus/constants': workspace:*
+      '@c-plus/hooks': workspace:^0.0.1
       '@c-plus/theme-chalk': workspace:^1.0.0
+      '@c-plus/tokens': workspace:^0.0.1
+      '@c-plus/utils': workspace:*
       '@esbuild-kit/cjs-loader': ^2.4.2
       '@types/gulp': ^4.0.10
       '@types/gulp-autoprefixer': ^0.0.34
@@ -31,7 +35,11 @@ importers:
       vue: ^3.3.4
     dependencies:
       '@c-plus/components': link:packages/components
+      '@c-plus/constants': link:packages/constants
+      '@c-plus/hooks': link:packages/hooks
       '@c-plus/theme-chalk': link:packages/theme-chalk
+      '@c-plus/tokens': link:packages/tokens
+      '@c-plus/utils': link:packages/utils
       axios: 1.4.0
       chalk: 5.2.0
       consola: 3.1.0
