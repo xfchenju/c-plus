@@ -11,7 +11,7 @@ function compile() {
 }
 
 function copyFont() {
-  return src(path.resolve(__dirname, './src/fonts/**')).pipe(cleanCss()).pipe(dest('./dist/fonts'))
+  return src(path.resolve(__dirname, './src/css/fonts/**')).pipe(cleanCss()).pipe(dest('./dist/css/fonts'))
 }
 
 function copyFullStyles() {

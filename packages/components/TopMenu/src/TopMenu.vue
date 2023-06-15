@@ -1,6 +1,6 @@
 <template>
     <div class="c-top-menu app-menu-list g-ml8">
-      <el-menu :default-active="activeMenu" mode="horizontal" @select="changePlatform">
+      <el-menu :default-active="props.defaultMenu" mode="horizontal" @select="onSelect">
         <el-menu-item
           :index="item.menuIndex"
           v-for="item in navbarMenuConfiguration"
@@ -19,24 +19,26 @@
     </div>
 </template>
 <script lang="ts" setup name="TopMenu">
-import { ref, onMounted } from 'vue';
+import { onMounted } from 'vue';
 import { navbarMenuConfiguration } from './config'
 interface TopMenuProps {
   get: any;
   post: any;
+  defaultMenu: string;
 }
 const props = defineProps<TopMenuProps>()
-const getManagerInfo = () => props.get(`/upms/customer/getCustomerInfo`);
-const activeMenu = ref();
-const user = ref()
+const emits = defineEmits(['select'])
+// const getManagerInfo = () => props.get(`/upms/customer/getCustomerInfo`);
+// const user = ref()
 onMounted(async () => {
-  const res = await getManagerInfo()
-  console.log('res', res)
-  user.value = res.user
+  // const res = await getManagerInfo()
+  // console.log('res', res)
+  // user.value = res.user
 })
 
-function changePlatform() {
-  console.log('changePlatform')
+function onSelect(...arg: any) {
+  console.log('onSelect', arg)
+  emits('select', ...arg)
 }
 
 defineOptions({

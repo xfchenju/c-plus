@@ -1,8 +1,8 @@
 {
   "name": "@xfchenju/c-plus",
-  "version": "1.0.2",
+  "version": "1.0.6",
   "description": "",
-  "main": "./es/packages/components/index.js",
+  "main": "./es/index.js",
   "typings": "./es/packages/components/index.d.ts",
   "scripts": {
     "build": "vite build"

@@ -1,0 +1,149 @@
+@use './mixins/mixins.scss'as *;
+
+.#{$namespace}-navbar {
+  width: 100%;
+  height: 50px;
+  background: #ffffff;
+  box-shadow: 0px 2px 4px 0px #f5f9fa, 0px 2px 4px -4px #eceff0;
+  padding: 0 24px 0 0;
+  z-index: 999;
+  position: fixed;
+  .logo-wrapper {
+    .logo-container {
+      padding: 0 23px;
+    }
+    .logo {
+      width: 18px;
+      height: 18px;
+    }
+    .logo-text {
+      width: 46px;
+      height: 18px;
+      background: #03385d;
+      border-radius: 2px;
+    }
+  }
+  :deep(.el-breadcrumb) {
+    display: flex;
+    align-items: center;
+  }
+
+  .avatar-wrap {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .name {
+      display: inline-block;
+      max-width: 112px;
+      min-width: 36px;
+      text-align: right;
+    }
+    .avatar-img {
+      width: 24px;
+      height: 24px;
+      margin-right: 9px;
+    }
+  }
+
+  .breadcrumb-back-btn {
+    color: #a9aeb3;
+    .breadcrumb-back-icon {
+      height: 20px;
+      line-height: 20px;
+    }
+    .breadcrumb-back-text {
+      font-size: 14px;
+    }
+    &:hover {
+      color: #03ac82;
+    }
+  }
+  
+  .breadcrumb-link,
+  .breadcrumb-unlink {
+    color: #a9aeb3;
+  }
+  .breadcrumb-link {
+    cursor: pointer;
+    &:hover {
+      color: $themeColor;
+    }
+  }
+  .breadcrumb-last {
+    color: #212529;
+    // line-height: 16px;
+  }
+  .short-line {
+    width: 1px;
+    height: 16px;
+    background: #ebeef5;
+    margin: 0 10px;
+  }
+  .short-line-right {
+    width: 1px;
+    height: 16px;
+    background: #ebeef5;
+    margin: 0 19px;
+  }
+  .select-menu {
+    color: $themeColor;
+    font-weight: bold;
+  }
+  .user_name {
+    box-sizing: border-box;
+    padding: 18px 24px 6px;
+    width: 240px;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    color: #212529;
+  }
+  .company {
+    width: 240px;
+    height: 34px;
+    line-height: 34px;
+  }
+  .company_tip {
+    font-size: 12px;
+    padding-left: 24px;
+    margin-bottom: 22px;
+    height: 16px;
+    line-height: 16px;
+    color: #a9aeb3;
+  }
+  .middle {
+    width: 100%;
+    height: 14px;
+    background: linear-gradient(180deg, #f6f9fa 0%, #ffffff 100%);
+    border-radius: 1px;
+  }
+  
+  .logout {
+    font-size: 14px;
+    padding: 0 12px;
+    width: 216px;
+    height: 48px;
+    line-height: 48px;
+    cursor: pointer;
+    margin: 0px 12px;
+    &:hover {
+      border-radius: 4px;
+      color: $themeColor;
+      background: #f6f9fa;
+    }
+  }
+  
+  .navbar-dropdown-container {
+    width: 240px;
+    overflow: hidden;
+  }
+}
+
+.navbar-dropdown.el-popper {
+  position: fixed !important;
+  width: 240px !important;
+  top: 50px !important;
+  z-index: 1999 !important;
+  border: none !important;
+  box-shadow: 0px 2px 12px 0px #f5f9fa, 0px 2px 8px 0px #eceff0 !important;
+}
