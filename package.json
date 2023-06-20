@@ -19,7 +19,10 @@
     "lodash": "^4.17.21",
     "typescript": "^5.0.4",
     "vite-plugin-dts": "^1.7.1",
-    "vue": "^3.3.4"
+    "vue": "3.2.32"
+  },
+  "peerDependencies": {
+    "vue": "^3.2.0"
   },
   "devDependencies": {
     "@esbuild-kit/cjs-loader": "^2.4.2",

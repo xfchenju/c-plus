@@ -18,8 +18,13 @@
       </el-menu>
     </div>
 </template>
-<script lang="ts" setup name="TopMenu">
-import { ref, inject, onMounted } from 'vue';
+<script lang="ts">
+export default {
+  name: 'CTopMenu'
+}
+</script>
+<script lang="ts" setup>
+import { ref, onMounted } from 'vue';
 import { navbarMenuConfiguration } from './config';
 import { useGlobalConfig } from '../../hooks';
 import { getManagerInfo } from '../../commonModule/apis/common/common'
@@ -27,20 +32,19 @@ const activeMenu = ref()
 
 const globalConfig = useGlobalConfig()
 
-const config = globalConfig.value.CommonModuleConfig
-
 // const { get } = globalConfig.value;
-const user = ref()
+// const user = ref()
 onMounted(async () => {
   const res = await getManagerInfo()
-  console.log('res', res)
-  user.value = res.user
+  console.log('config', globalConfig.value)
+  console.log('config res', res)
+  // user.value = res.user
 })
 
-defineOptions({
-  name: 'CTopMenu',
-  inheritAttrs: false
-})
+// defineOptions({
+//   name: 'CTopMenu',
+//   inheritAttrs: false
+// })
 
 
 

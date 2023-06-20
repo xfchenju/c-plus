@@ -1,13 +1,11 @@
 {
   "name": "@xfchenju/c-plus",
-  "version": "1.0.2",
+  "version": "2.0.2",
   "description": "",
-  "main": "./es/packages/components/index.js",
+  "main": "./lib/packages/components/index.js",
+  "module": "./es/packages/components/index.js",
   "typings": "./es/packages/components/index.d.ts",
-  "scripts": {
-    "build": "vite build"
-  },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }
